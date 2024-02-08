@@ -1,0 +1,15 @@
+
+ #header{
+  display: flex;
+  align-items: center;
+ }
+ img {
+    width: 5rem;
+    margin-left: 5rem;
+    height: 2rem;
+    padding: 10px;
+    background-color: white;
+   
+  }
+  
+  

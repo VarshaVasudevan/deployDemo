@@ -1,0 +1,779 @@
+#header {
+  display: flex;
+ 
+ 
+  justify-content: space-between; /* Align items to the right */
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0);
+}
+#header .text{
+  width:20rem;
+  height: 2rem;
+  margin-top: 2rem;
+}
+.logo {
+  max-width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+Form {
+  margin-top: 2rem;
+  border-radius: 0rem;
+}
+
+.icon-group {
+  display: flex;
+  margin-left: 6rem;
+  gap: 2rem; 
+  align-items: center;/* Adjust the gap value as needed */
+}
+
+.fa-search,
+.fa-user,
+.fa-heart,
+.fa-shopping-cart {
+  margin: 2rem;
+  cursor: pointer;
+  color: black;
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  #header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  Form {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .icon-group {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .fa-search,
+  .fa-user,
+  .fa-heart,
+  .fa-shopping-cart {
+    margin: 0.5rem;
+    z-index: 10rem;
+  }
+}
+.cart-dropdown {
+  width: 100%;
+}
+
+.cart-dropdown table {
+  width: 100%;
+}
+
+.cart-dropdown button {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .cart-dropdown {
+    width: 30rem;
+  }
+
+  .cart-dropdown table {
+    width: 100%;
+  }
+
+  .cart-dropdown button {
+    width: calc(100% - 6rem);
+  }
+}
+.slider {
+  position: relative;
+  height: 20rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.image-slide {
+  position: relative;
+  width: 100rem;
+  height: 20rem;
+  border-radius: 10px;
+  
+  margin-top: 10rem;
+  overflow: hidden;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+
+
+/* ImageSlider.css */
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 1rem;
+  }
+  
+  .slider-image-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+  }
+  
+  .slider-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    border-radius: 50%; /* Make it round */
+    font-size: 24px;
+    color: #333; /* Set the color to your preference */
+    cursor: pointer;
+    padding: 10px; /* Adjust as needed */
+  }
+  
+  .slider-button:focus {
+    outline: none;
+  }
+  .image-container {
+    position: relative;
+    display: inline-block;
+    padding: 5rem;
+    width: 100%;
+     /* Make sure the container wraps around the image and button */
+  }
+  
+  .image {
+    position: relative;
+    width: 80rem; /* Make the image take up the entire container */
+    height: 30rem; /* Maintain the aspect ratio */
+    display: block;
+    margin-top: 10rem;
+    overflow: hidden;
+    
+
+  }
+  .offer-image-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-top: 12rem; /* Add some margin between images */
+  }
+  
+  .offer-image {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .overlay-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .offer-images-container {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .offer-image1,
+    .offer-image2 {
+      width: 48%; /* Adjust width to fit two images in one row */
+    }
+  }
+  
+  
+  .overlay-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #3498db; /* Set your desired button background color */
+    color: #ffffff; /* Set your desired button text color */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 7.5rem;
+  }
+
+  /*brand*/
+  .mobile-app-icons-container {
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    margin-left: 10rem;
+    margin-top: 2rem;
+    
+  }
+  .brand-head{
+    margin-left: 12rem;
+  }
+  .scroll-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .app-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 4rem;
+    border-radius: 50%;
+    
+  }
+
+  .loginform {
+    margin-left: 17rem;
+    margin-top: 10rem;
+    width: 50rem;
+    height: 60rem;
+  }
+  
+  .loginform h3 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .loginform h6 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    text-align: center;
+  }
+  
+  .loginform .input-container {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    margin-left: 5rem;
+  }
+  
+  .loginform .responsive-input {
+    width: 80%;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  .google-button,
+  .apple-button {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-style: ridge;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20%;
+    width: 60%; /* Adjust the width as needed */
+  }
+  
+  /* Optional: Hover effect */
+  .google-button:hover {
+    opacity: 0.8;
+  }
+  
+  .apple-button {
+    margin-top: 2rem;
+  }
+  
+  .loginform .otp {
+    background-color: #1AA5C3;
+    color: white;
+    width: 10rem;
+    height: 3rem;
+    margin-left: 40%;
+    margin-top: 2rem;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 1200px) {
+    .loginform {
+      width: 80%;
+    }
+  
+    .loginform .responsive-input,
+    .google-button,
+    .apple-button,
+    .otp {
+      margin-left: 5%;
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .loginform {
+      margin-left: 5%;
+      width: 90%;
+    }
+  
+    .loginform .responsive-input,
+    .google-button,
+    .apple-button,
+    .otp {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+  /* MobileShoppingList.css */
+
+.mobile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding:4rem;
+  }
+  .mobile-grid img{
+    height: 10rem;
+    width: 10rem;
+  }
+  
+  .mobile-item {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  .mobile-item:hover img {
+    transform: scale(1.1);
+  }
+
+  .mobile-grid .mobile-item:hover {
+    transform: scale(1, 1.5);
+}
+
+  /* .mobile-grid .add-cart{
+    border-radius: 60%;
+    color: black;
+    background-color:white;
+    border: none;
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
+  .add-cart:hover{
+    color: white;
+    background-color: #1AA5C3;
+  } */
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .mobile-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+    }
+  }
+  .mobile-item:hover .details {
+    opacity: 1;
+  }
+
+  /* Button styles */
+.button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* "+" button specific styles */
+.add-cart {
+  margin-right: 8px; 
+  border-radius: 40%;
+  border-style: none;/* Add margin between buttons */
+}
+.add-cart:hover {
+  background-color: #007bff;
+}
+
+
+/* "-" button specific styles */
+.remove-cart {
+  background-color: white;
+  border-radius: 40%;
+  border-style: none;/* Change background color */
+}
+
+.remove-cart:hover {
+  background-color: #007bff;
+}
+
+/* Container for buttons */
+.button-container {
+  display: flex;
+  flex-direction: row; /* Arrange buttons horizontally */
+  align-items: center; /* Center buttons vertically */
+}
+
+  
+  
+.cart-container {
+  max-width: 100%; /* Adjust the maximum width to fit the screen */
+  padding: 20px;
+}
+
+.cart-container h1 {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem; /* Add some space below the heading */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 1rem; /* Adjust padding for better spacing */
+  text-align: left;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-container .update,
+.cart-container .apply-coupon,
+.cart-container .checkout {
+  margin-top: 10px;
+  width: 16rem; /* Adjust button width to fill the container */
+  height: 3rem;
+  border: none;
+  border-radius: 5px; /* Add some border radius for better appearance */
+  font-size: 1rem; /* Adjust font size */
+}
+.cart-container .update{
+  border-color: black;
+  border-style:solid;
+  width: 15rem;
+}
+.cart-container .apply-coupon {
+  background-color: black;
+  color: white;
+}
+
+.cart-container .checkout {
+  background-color: #1AA5C3;
+  color: white;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  .cart-container {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  table {
+    font-size: 0.9rem; /* Decrease font size for smaller screens */
+  }
+
+  th, td {
+    padding: 0.5rem; /* Decrease padding for smaller screens */
+  }
+}
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    table {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  
+    button {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  }
+ /* TotalCart.css */
+ .cartTotal {
+  position: relative;
+  top: 20px; /* Adjust top position as needed */
+  right: 20px; /* Adjust right position as needed */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px; /* Default width */
+  z-index: 1000; /* Ensure the component stays on top of other elements */
+  overflow: hidden; /* Enable vertical scrolling if content exceeds container height */
+  max-height: calc(100vh - 40px); /* Set maximum height to fit within viewport */
+}
+
+@media screen and (max-width: 600px) {
+  .cartTotal {
+    width: calc(100% - 40px); /* Adjust width for smaller screens */
+    left: 20px;
+    right: 20px;
+    margin: 0; /* Remove margin for full width */
+    border-radius: 0; /* Remove border-radius for full width */
+    border-right: none; /* Remove right border for full width */
+    border-left: none; /* Remove left border for full width */
+    top: auto; /* Remove fixed positioning for smaller screens */
+    bottom: 20px; /* Position at the bottom for smaller screens */
+  }
+}
+
+.total-heading {
+  margin-bottom: 10px;
+}
+
+.total-table {
+  width: 100%;
+}
+
+.total-table td {
+  padding: 5px 0;
+}
+
+.checkout {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkout:hover {
+  background-color: #0056b3;
+}
+
+
+table {
+  width: 50%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 15px;
+}
+
+button.checkout {
+  background-color: #1AA5C3;
+  color: white;
+  width: 10rem;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+  .cart-dropdown {
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    width: 30rem;
+    right: 0;
+    background-color:white;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px; 
+    z-index: 1000;
+    /* Remove or override display: none; */
+  }
+  
+  .cart-dropdown ul {
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+    background-color: white;
+  }
+  
+  .cart-dropdown li {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .cart-dropdown img{
+    height: 10rem;
+    width: 7rem;
+  }
+
+  .offer-images-container {
+    display: flex;
+  }
+  
+  .offer-image {
+    flex: 1;
+  }
+.home-list-product{
+  width:100rem;
+  height: 10rem;
+}
+@media screen and (max-width: 768px) {
+  .cartTotal {
+    text-align: center; /* Center align content */
+  }
+
+  .cartTotal table {
+    margin: 0 auto; /* Center the table */
+  }
+
+  .cartTotal h1 {
+    margin-bottom: 10px; /* Add some spacing below the heading */
+  }
+
+  .cartTotal td {
+    padding: 5px; /* Add padding to table cells */
+  }
+
+  .cartTotal button {
+    width: 100%; /* Make the button full width */
+  }
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: white;
+  color: #333;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin: 0 5px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Reduce space between "More Information" and "Social Media" columns */
+.footer-column:nth-child(3) {
+  margin-right: 0;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    margin: 0 0 20px; /* Adjust margin for smaller screens */
+  }
+
+  .footer-column:nth-child(3) {
+    margin-right: 5px; /* Add back some margin between columns */
+  }
+}
+
+.success-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.success-icon {
+  font-size: 5rem;
+  color: #28a745; /* Green color */
+  margin-bottom: 1rem;
+}
+
+.success-heading {
+  font-size: 2rem;
+  color: #333; /* Dark color */
+  margin-bottom: 0.5rem;
+}
+
+.success-message {
+  font-size: 1.2rem;
+  color: #555; /* Medium-dark color */
+}
+
